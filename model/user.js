@@ -9,22 +9,8 @@ const UserSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    domains: [
-        {
-            domain: {
-                type: String,
-                require: true
-            }
-        }
-    ],
-    interests: [
-        {
-            interest: {
-                type: String,
-                require: true
-            }
-        }
-    ],
+    domains: [],
+    interests: [],
     socialMedia: {
         type: String,
         require: true
@@ -43,6 +29,6 @@ const UserSchema = new mongoose.Schema({
     }
 })
 
-const User = mongoose.model("User", UserSchema)
+const User = mongoose.model("gdsc", UserSchema)
 
 module.exports = User
