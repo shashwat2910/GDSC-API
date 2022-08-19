@@ -11,4 +11,13 @@ app.post("/adddetail", async (request, response) => {
     }
 })
 
+app.get("/details", async(request, response) => {
+  const users = await User.find({})
+  try {
+    response.send(users)
+  } catch (error) {
+    response.status(500).send(error)
+  }
+})
+
 module.exports = app
