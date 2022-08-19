@@ -2,6 +2,9 @@ const express = require("express")
 const User = require('../model/user')
 const app = express()
 
+var cors = require('cors')
+app.use(cors())
+
 app.post("/adddetail", async (request, response) => {
     const user = new User(request.body)
     try {
