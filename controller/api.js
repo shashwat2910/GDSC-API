@@ -6,6 +6,8 @@ app.post("/adddetail", async (request, response) => {
     const user = new User(request.body)
     try {
       await user.save()
+      console.log(request.body);
+      response.status(200).send("Saved user")
     } catch (error) {
       response.status(500).send(error)
     }
