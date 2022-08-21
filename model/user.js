@@ -11,10 +11,7 @@ const UserSchema = new mongoose.Schema({
     },
     domains: [],
     interests: [],
-    socialMedia: {
-        type: String,
-        require: true
-    },
+    socialMedia: [],
     event: {
         type: String,
         require: true
