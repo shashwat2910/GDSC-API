@@ -1,6 +1,12 @@
 const mongoose = require("mongoose")
 
 const UserSchema = new mongoose.Schema({
+    name: {
+        type: String
+    },
+    codeLang: {
+        type: String
+    },
     class: {
         type: String,
         require: true
